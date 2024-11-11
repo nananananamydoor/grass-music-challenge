@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>草音音樂會冠軍預測</title>
-    <link rel="stylesheet" href="style.css">
+    <title>投票系統</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        form { margin: 20px; }
+        canvas { margin-top: 20px; }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>草音音樂會冠軍預測活動</h1>
-        <form id="voteForm">
-            <label>
-                <input type="radio" name="contestant" value="參賽者1" required> 參賽者1
-            </label><br>
-            <label>
-                <input type="radio" name="contestant" value="參賽者2" required> 參賽者2
-            </label><br>
-            <label>
-                <input type="radio" name="contestant" value="參賽者3" required> 參賽者3
-            </label><br>
-            <input type="email" id="email" placeholder="請輸入你的Email" required><br>
-            <button type="submit">提交預測</button>
-        </form>
-        <div id="result"></div>
-    </div>
+    <h1>投票系統</h1>
+    <form id="voteForm">
+        <input type="email" id="email" placeholder="請輸入您的 Email" required><br><br>
+        <label>
+            <input type="radio" name="option" value="選項A" required> 選項A
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="選項B"> 選項B
+        </label><br>
+        <label>
+            <input type="radio" name="option" value="選項C"> 選項C
+        </label><br>
+        <button type="submit">提交投票</button>
+    </form>
+
+    <h2>投票結果</h2>
+    <canvas id="resultChart" width="400" height="200"></canvas>
+
     <script src="script.js"></script>
 </body>
 </html>
