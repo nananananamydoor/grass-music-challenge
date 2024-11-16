@@ -3,34 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投票系統</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-    <style>
-        body { text-align: center; font-family: Arial, sans-serif; }
-        form { margin: 20px; }
-        canvas { margin-top: 20px; }
-    </style>
+    <title>草音拼圖尋寶挑戰</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
-    <h1>投票系統</h1>
-    <form id="voteForm">
-        <input type="email" id="email" placeholder="請輸入您的 Email" required><br><br>
-        <label>
-            <input type="radio" name="option" value="選項A" required> 選項A
-        </label><br>
-        <label>
-            <input type="radio" name="option" value="選項B"> 選項B
-        </label><br>
-        <label>
-            <input type="radio" name="option" value="選項C"> 選項C
-        </label><br>
-        <button type="submit">提交投票</button>
-    </form>
-
-    <h2>投票結果</h2>
-    <canvas id="resultChart" width="400" height="200"></canvas>
-
-    <script src="script.js"></script>
+<body onload="checkProgress()">
+    <h1>草音拼圖尋寶挑戰</h1>
+    <div id="progress">
+        <div id="puzzle1" class="puzzle-piece">拼圖 1</div>
+        <div id="puzzle2" class="puzzle-piece">拼圖 2</div>
+        <div id="puzzle3" class="puzzle-piece">拼圖 3</div>
+    </div>
+    <a href="complete.html" class="button">查看完成狀態</a>
 </body>
 </html>
